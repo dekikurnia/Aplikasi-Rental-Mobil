@@ -1,0 +1,27 @@
+.tab-pane
+{
+    padding: 5px 0 5px 0;
+}
+
+.navbar-brand
+{
+    font-size: 16px;
+    line-height: 23px;
+    float: left;
+    height: 45px;
+    padding: 20.5px 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #00BFFF;
+    color: #000000;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+	display: inline-block;
+	margin-left: -1px;
+}
+.dataTables_wrapper .dataTables_paginate .paginate_button:first-child {
+	margin-left: 0;
+}
+
