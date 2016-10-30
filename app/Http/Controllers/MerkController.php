@@ -61,11 +61,12 @@ class MerkController extends Controller
     {
         $this->validate($request, ['kode_merk' => 'required|unique:merk']);
         $this->validate($request, ['nama_merk' => 'required']);
+        $this->validate($request, ['id_type' => 'required|exists:type,id']);
         $merk = new Merk();
         $merk->id = Uuid::generate(4);
         $merk->kode_merk = $request->kode_merk;
         $merk->nama_merk = $request->nama_merk;
-        $merk->id_type = '48a6a316-9ca9-4214-b5c6-e7b33a77e860';
+        $merk->id_type = $request->id_type;
         $merk->save();
         Session::flash("flash_notification", [
             "level"=>"info",
@@ -108,9 +109,11 @@ class MerkController extends Controller
     {
         $this->validate($request, ['kode_merk' => 'required']);
         $this->validate($request, ['nama_merk' => 'required']);
+        $this->validate($request, ['id_type' => 'required']);
         $merk = Merk::find($id);
         $merk->kode_merk = $request->kode_merk;
         $merk->nama_merk = $request->nama_merk;
+        $merk->id_type = $request->id_type;
         $merk->save();
         Session::flash("flash_notification", [
             "level"=>"info",
