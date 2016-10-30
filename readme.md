@@ -8,6 +8,6 @@
 4. Jalankan php artisan migrate
 5. jalankan php artisan db:seed untuk sample data pada database 
 
-### Thanks for Backpack for Laravel https://github.com/laravel-backpack for template admin
+### Thanks to --Backpack for Laravel-- https://github.com/laravel-backpack for template admin
 
 
