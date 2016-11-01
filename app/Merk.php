@@ -8,6 +8,7 @@ class Merk extends Model
 {
     protected $table = "merk";
     public $incrementing = false;
+    protected $fillable = ['kode_merk', 'nama_merk'];
 
     public function kendaraan()
     {

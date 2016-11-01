@@ -18,4 +18,14 @@ Route::get('/', function () {
 Route::group(['prefix'=>'admin', 'middleware'=>['auth']], function () {
 	Route::resource('merk', 'MerkController');
 	Route::resource('kendaraan', 'KendaraanController');
+	
+	Route::get('export/merk', [
+		'as' => 'export.merk',
+		'uses' => 'MerkController@export'
+		]);
+	Route::post('export/merk', [
+		'as' => 'export.merk.post',
+		'uses' => 'MerkController@exportPost'
+		]);
+
 });

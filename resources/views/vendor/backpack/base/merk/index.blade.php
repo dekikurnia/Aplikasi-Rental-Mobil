@@ -7,9 +7,12 @@
             		<li><a href="{{ url('/admin/dashboard') }}">Dashboard</a></li>
             		<li class="active">Merk</li>
             	</ul>
-                <p> <a class="btn btn-info" href="{{ route('merk.create') }}">
-                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah
-                </a></p> 
+                <p> 
+                <a class="btn btn-info" href="{{ route('merk.create') }}">
+                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Tambah </a>
+                <a class="btn btn-success" href="{{ url('/admin/export/merk') }}">
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Export </a>
+                </p> 
             	<div class="panel panel-default">
             		<div class="panel-heading">
             			<h2 class="panel-title">Merk</h2>

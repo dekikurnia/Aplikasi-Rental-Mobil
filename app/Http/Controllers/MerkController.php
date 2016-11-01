@@ -10,6 +10,9 @@ use App\Merk;
 use App\Type;
 use Webpatser\Uuid\Uuid;
 use Session;
+use Excel;
+use PDF;
+use DB;
 
 class MerkController extends Controller
 {
@@ -137,4 +140,35 @@ class MerkController extends Controller
             ]);
         return redirect()->route('merk.index');
     }
+
+    public function export()
+    {
+        return view('vendor.backpack.base.merk.export');
+    }
+
+    public function exportPost(Request $request) 
+    { 
+        $this->validate($request, [
+            'id_type'=>'required',
+            'type'=>'required|in:pdf,xls'
+        ], [
+            'id_type.required'=>'Anda belum memilih tipe mobil. Pilih minimal 1 tipe mobil.'
+        ]);
+
+        //$merk = DB::table('merk')->whereIn('id', $request->get('id_type'))->get();
+
+        $merk = Merk::join('type', 'type.id', '=', 'merk.id_type')
+            ->select('merk.*', 'type.nama_type')
+            ->whereIn('type.id', $request->get('id_type'))->get();
+ 
+        $handler = 'export' . ucfirst($request->get('type'));
+        return $this->$handler($merk);
+    }
+
+    private function exportPdf($merk)
+    {
+        $pdf = PDF::loadview('vendor.backpack.base.pdf.merk', compact('merk'));
+        return $pdf->stream('merk.pdf');
+    }
 }
+
