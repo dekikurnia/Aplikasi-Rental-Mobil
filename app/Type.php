@@ -17,6 +17,6 @@ class Type extends Model
 
     public function merk()
     {
-    	return $this->hasMany('App\Merk');
+    	return $this->hasMany('App\Merk','id_type');
     }
 }

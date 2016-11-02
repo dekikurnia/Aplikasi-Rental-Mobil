@@ -7,7 +7,11 @@ use Yajra\Datatables\Html\Builder;
 use Yajra\Datatables\Datatables;
 use App\Http\Requests;
 use App\Kendaraan;
-use Illuminate\Support\Facades\DB;
+use App\Merk;
+use Webpatser\Uuid\Uuid;
+use Session;
+use Excel;
+use PDF;
 
 class KendaraanController extends Controller
 {
@@ -59,7 +63,23 @@ class KendaraanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, ['no_plat' => 'required|unique:kendaraan']);
+        $this->validate($request, ['tahun' => 'required']);
+        $this->validate($request, ['tarif_perjam' => 'required']);
+        $this->validate($request, ['status_rental' => 'required']);
+        $this->validate($request, ['id_merk' => 'required|exists:merk,id']);
+        $kendaraan = new Kendaraan();
+        $merk->id = Uuid::generate(4);
+        $merk->no_plat = $request->no_plat;
+        $merk->tahun = $request->tahun;
+        $merk->tahun = $request->tahun;
+        $merk->id_merk = $request->id_merk;
+        $merk->save();
+        Session::flash("flash_notification", [
+            "level"=>"info",
+            "message"=>"Berhasil menyimpan $merk->nama_merk"
+            ]);
+        return redirect()->route('merk.index');
     }
 
     /**
