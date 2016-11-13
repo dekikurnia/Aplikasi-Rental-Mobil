@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::group(['prefix'=>'admin', 'middleware'=>['auth']], function () {
 	Route::resource('merk', 'MerkController');
 	Route::resource('kendaraan', 'KendaraanController');
+	Route::resource('pelanggan', 'PelangganController');
 	
 	Route::get('export/merk', [
 		'as' => 'export.merk',
@@ -26,6 +27,15 @@ Route::group(['prefix'=>'admin', 'middleware'=>['auth']], function () {
 	Route::post('export/merk', [
 		'as' => 'export.merk.post',
 		'uses' => 'MerkController@exportPost'
+		]);
+
+	Route::get('export/pelanggan', [
+		'as' => 'export.pelanggan',
+		'uses' => 'PelangganController@export'
+		]);
+	Route::post('export/pelanggan', [
+		'as' => 'export.pelanggan.post',
+		'uses' => 'PelangganController@exportPost'
 		]);
 
 });

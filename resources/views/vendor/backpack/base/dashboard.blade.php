@@ -1,9 +1,12 @@
 @extends('backpack::layout')
 
 @section('content')
+<div class="row">
+<div class="col-md-14">
+@include('vendor.backpack.base.widgets.infoBox')
     <div class="row">
-      <div class="col-md-12">
-      <div class="col-md-12">
+      <div class="col-md-10">
+      <div class="col-md-10">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h2 class="panel-title">Dashboard</h2>
@@ -13,7 +16,7 @@
               Selamat datang di Menu Admin. Silahkan pilih menu administrasi yang diinginkan.
               <hr>
               <h4>Statistik Merk</h4>
-              <canvas id="chartMerk" width="400" height="150"></canvas>
+              <canvas id="chartMerk" width="600" height="250"></canvas>
           </div>
         </div>
       </div>

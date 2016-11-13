@@ -12,7 +12,6 @@ use Webpatser\Uuid\Uuid;
 use Session;
 use Excel;
 use PDF;
-use DB;
 
 class MerkController extends Controller
 {
@@ -39,7 +38,7 @@ class MerkController extends Controller
         $html = $htmlBuilder
         ->addColumn(['data' => 'kode_merk', 'name'=>'kode_merk', 'title'=>'Kode Merk'])
         ->addColumn(['data' => 'nama_merk', 'name'=>'nama_merk', 'title'=>'Nama Merk'])
-        ->addColumn(['data' => 'nama_type', 'name'=>'nama_type', 'title'=>'Tipe', 'orderable'=>false, 'searchable'=>false])
+        ->addColumn(['data' => 'nama_type', 'name'=>'nama_type', 'title'=>'Tipe'])
         ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, 'searchable'=>false]);   
         return view('vendor.backpack.base.merk.index')->with(compact('html'));
     }

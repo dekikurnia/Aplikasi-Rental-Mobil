@@ -12,7 +12,7 @@ class Merk extends Model
 
     public function kendaraan()
     {
-    	return $this->hasMany('App\Kendaraan');
+    	return $this->hasMany('App\Kendaraan', 'id_merk');
     }
 
     public function type()

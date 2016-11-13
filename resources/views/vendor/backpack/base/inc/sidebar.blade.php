@@ -25,9 +25,14 @@
                   <li><a href="{{ route('merk.index') }}"><i class="fa fa-bars"></i><span>Merk</span></a></li>
                   <li><a href="#"><i class="fa fa-file"></i><span>Type</span></a></li>
                   <li><a href="{{ route('kendaraan.index') }}"><i class="fa fa-car"></i> <span>Kendaraan</span></a></li>
-            
-       
+                  <li><a href="{{ route('pelanggan.index') }}"><i class="fa fa-user"></i> <span>Pelanggan</span></a></li>
+                  <li><a href="#"><i class="fa fa-users"></i> <span>Karyawan</span></a></li>
 
+          <li class="header">TRANSAKSI</li>
+              
+                  <li><a href="#"><i class="fa fa-cart-plus"></i><span>Peminjaman</span></a></li>
+                  <li><a href="#"><i class="fa fa-arrow-left"></i><span>Pengembalian</span></a></li>
+      
           <!-- ======================================= -->
           <li class="header">{{ trans('backpack::base.user') }}</li>
           <li><a href="{{ url(config('backpack.base.route_prefix').'/logout') }}"><i class="fa fa-sign-out"></i> <span>{{ trans('backpack::base.logout') }}</span></a></li>

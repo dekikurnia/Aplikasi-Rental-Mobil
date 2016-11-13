@@ -69,17 +69,18 @@ class KendaraanController extends Controller
         $this->validate($request, ['status_rental' => 'required']);
         $this->validate($request, ['id_merk' => 'required|exists:merk,id']);
         $kendaraan = new Kendaraan();
-        $merk->id = Uuid::generate(4);
-        $merk->no_plat = $request->no_plat;
-        $merk->tahun = $request->tahun;
-        $merk->tahun = $request->tahun;
-        $merk->id_merk = $request->id_merk;
-        $merk->save();
+        $kendaraan->id = Uuid::generate(4);
+        $kendaraan->no_plat = $request->no_plat;
+        $kendaraan->tahun = $request->tahun;
+        $kendaraan->tarif_perjam = $request->tarif_perjam;
+        $kendaraan->status_rental = $request->status_rental;
+        $kendaraan->id_merk = $request->id_merk;
+        $kendaraan->save();
         Session::flash("flash_notification", [
             "level"=>"info",
-            "message"=>"Berhasil menyimpan $merk->nama_merk"
+            "message"=>"Berhasil menyimpan $kendaraan->no_plat"
             ]);
-        return redirect()->route('merk.index');
+        return redirect()->route('kendaraan.index');
     }
 
     /**
@@ -101,7 +102,8 @@ class KendaraanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $kendaraan = Kendaraan::find($id);
+        return view('vendor.backpack.base.kendaraan.edit')->with(compact('kendaraan'));
     }
 
     /**
@@ -113,7 +115,24 @@ class KendaraanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, ['no_plat' => 'required']);
+        $this->validate($request, ['tahun' => 'required']);
+        $this->validate($request, ['tarif_perjam' => 'required']);
+        $this->validate($request, ['status_rental' => 'required']);
+        $this->validate($request, ['id_merk' => 'required|exists:merk,id']);
+        $kendaraan = Kendaraan::find($id);
+        $kendaraan->id = Uuid::generate(4);
+        $kendaraan->no_plat = $request->no_plat;
+        $kendaraan->tahun = $request->tahun;
+        $kendaraan->tarif_perjam = $request->tarif_perjam;
+        $kendaraan->status_rental = $request->status_rental;
+        $kendaraan->id_merk = $request->id_merk;
+        $kendaraan->save();
+        Session::flash("flash_notification", [
+            "level"=>"info",
+            "message"=>"Berhasil menyimpan $kendaraan->no_plat"
+            ]);
+        return redirect()->route('kendaraan.index');
     }
 
     /**
@@ -124,6 +143,12 @@ class KendaraanController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Kendaraan::destroy($id);
+        Session::flash("flash_notification", [
+            "level"=>"info",
+            "message"=>"Kendaraan berhasil dihapus"
+            ]);
+        return redirect()->route('kendaraan.index');
     }
+
 }
