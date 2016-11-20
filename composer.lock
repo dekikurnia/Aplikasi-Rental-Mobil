@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "19f2d825c74643f6cf4509dab3fb1ede",
-    "content-hash": "f61a34cd3adf40b901a7be8e4b84e1e6",
+    "hash": "54f2b0804a7717c2a5db0d165c11d78f",
+    "content-hash": "f6e09e0df59a4e6078c0fd4e0254b27d",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -91,6 +91,45 @@
                 "recaptcha"
             ],
             "time": "2016-08-24 16:35:03"
+        },
+        {
+            "name": "anlutro/curl",
+            "version": "1.4.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anlutro/php-curl.git",
+                "reference": "482c85b3e1635146ae967340b17a22b10c1aae80"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anlutro/php-curl/zipball/482c85b3e1635146ae967340b17a22b10c1aae80",
+                "reference": "482c85b3e1635146ae967340b17a22b10c1aae80",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "anlutro\\cURL\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Lutro",
+                    "email": "anlutro@gmail.com"
+                }
+            ],
+            "description": "Simple OOP cURL wrapper.",
+            "time": "2016-03-23 16:09:50"
         },
         {
             "name": "backpack/base",

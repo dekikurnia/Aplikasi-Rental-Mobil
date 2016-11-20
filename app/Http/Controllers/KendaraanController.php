@@ -41,7 +41,7 @@ class KendaraanController extends Controller
         ->addColumn(['data' => 'tarif_perjam', 'name'=>'tarif_perjam', 'title'=>'Tarif Perjam', 'className'=>'text-right'])
         ->addColumn(['data' => 'status_rental', 'name'=>'status_rental', 'title'=>'Status Rental','className'=>'text-center'])
         ->addColumn(['data' => 'nama_merk', 'name' => 'nama_merk', 'title'=>'Merk', 'orderable'=>false, 'searchable'=>false])
-        ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, 'searchable'=>false]);   
+        ->addColumn(['data' => 'action', 'name'=>'action', 'title'=>'', 'orderable'=>false, 'searchable'=>false]);  
         return view('vendor.backpack.base.kendaraan.index')->with(compact('html'));
     }
 

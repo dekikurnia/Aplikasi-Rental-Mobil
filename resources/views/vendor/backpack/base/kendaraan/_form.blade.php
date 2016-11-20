@@ -35,7 +35,7 @@
   <div class="col-md-4">
     {!! Form::select('id_merk', [''=>'']+App\Merk::pluck('nama_merk','id')->all(), null, 
     ['class'=>'js-selectize', 'placeholder' => 'Pilih Merk']) !!}
-    {!! $errors->first('id_type', '<p class="help-block">:message</p>') !!}
+    {!! $errors->first('id_merk', '<p class="help-block">:message</p>') !!}
   </div>
 </div>
 

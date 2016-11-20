@@ -109,28 +109,73 @@
       <span class="sr-only">Next</span>
     </a>
 </div>
-  
-<div class="container text-center">    
-  <h3>What We Do</h3><br>
+<br>
+</br>
+  <div class="container">
   <div class="row">
-    <div class="col-sm-4">
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Current Project</p>
-    </div>
-    <div class="col-sm-4"> 
-      <img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-      <p>Project 2</p>    
-    </div>
-    <div class="col-sm-4">
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-      <div class="well">
-       <p>Some text..</p>
-      </div>
-    </div>
+    <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="http://placehold.it/350x222" alt="">
+                <div class="caption">
+                  <h4 class="pull-right">$24.99</h4>
+                  <h4>Honda Brio
+                  </h4>
+                  <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right">15 reviews</p>
+                  <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="http://placehold.it/350x222" alt="">
+                <div class="caption">
+                  <h4 class="pull-right">$24.99</h4>
+                  <h4><a href="#">First Product</a></h4>
+                  <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right">15 reviews</p>
+                  <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="thumbnail">
+                <img src="http://placehold.it/350x222" alt="">
+                <div class="caption">
+                  <h4 class="pull-right">$24.99</h4>
+                  <h4><a href="#">First Product</a></h4>
+                  <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+                </div>
+                <div class="ratings">
+                  <p class="pull-right">15 reviews</p>
+                  <p>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                    <span class="glyphicon glyphicon-star"></span>
+                  </p>
+                </div>
+              </div>
+            </div>
   </div>
-</div><br>
+</div>
 
 <footer class="container-fluid text-center">
   <p>Footer Text</p>

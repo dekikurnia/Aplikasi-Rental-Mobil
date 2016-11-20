@@ -132,7 +132,7 @@ class MerkController extends Controller
      */
     public function destroy($id)
     {
-        Merk::destroy($id);
+        if(!Merk::destroy($id)) return redirect()->back();
         Session::flash("flash_notification", [
             "level"=>"info",
             "message"=>"Merk berhasil dihapus"

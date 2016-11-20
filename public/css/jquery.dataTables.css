@@ -434,3 +434,8 @@ table.dataTable td {
     margin-top: 0.5em;
   }
 }
+
+td.highlight {
+  font-weight: bold;
+  color: red;
+}

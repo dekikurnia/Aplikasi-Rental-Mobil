@@ -877,3 +877,18 @@ body[class^='skin-purple'] .pagination>.active>span:hover {
 .dataTables_wrapper .dataTables_paginate .paginate_button:first-child {
   margin-left: 0;
 }
+
+.panel > .panel-heading {
+    background-image: none;
+    background-color: #3599d6;
+    color: white;
+    background-blend-mode: multiply;
+}
+
+.sidebar {
+  position: absolute;
+  top: 50px;
+  bottom: 0px;
+  width: 230px;
+  overflow: scroll;   
+}
