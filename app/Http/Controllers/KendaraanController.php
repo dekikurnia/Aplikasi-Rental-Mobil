@@ -33,6 +33,9 @@ class KendaraanController extends Controller
                     'edit_url' => route('kendaraan.edit', $kendaraan->id),
                     'confirm_message' => 'Yakin ingin menghapus ' . $kendaraan->no_plat. '?'
                     ]);
+                })
+                ->setRowClass(function ($kendaraan) {
+                return $kendaraan->status_rental == 'Tersedia' ? 'hitam' : 'merah';
             })->make(true); 
         }
         $html = $htmlBuilder

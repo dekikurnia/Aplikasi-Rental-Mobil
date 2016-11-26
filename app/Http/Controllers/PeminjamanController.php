@@ -110,7 +110,7 @@ class PeminjamanController extends Controller
             $kendaraan = Kendaraan::findOrFail($id);
             LogPeminjaman::create(['id'=> Uuid::generate(4), 
                 'id_kendaraan'=> $id,
-                'id_pelanggan' =>'29fbe19a-ddc2-457c-b8f4-b9fef61ff5ac'
+                'id_pelanggan' =>'6c57e255-2cfb-43cd-b6b1-51a703caf92c'
                 ]);
 
             $kendaraan = Kendaraan::find($id);

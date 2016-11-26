@@ -892,3 +892,16 @@ body[class^='skin-purple'] .pagination>.active>span:hover {
   width: 230px;
   overflow: scroll;   
 }
+
+.hitam  { 
+  color: black; 
+}
+
+.merah  { 
+  color: red; 
+  font-weight: bold;
+}
+
+
+
+
